@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Righteous&display=swap" rel="stylesheet">
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+      
+</head>
+<body>
+  <div id="aviso" class="show">Confira o Carrinho antes de enviar o pedido</div>
+  <div class="app">
+    <div id="topo"></div>
+    <div id="cart">
+        <h1>Carrinho</h1>
+        <label for="name"></label>
+        <input type="text" id="name" name="name" placeholder="Nome" required><br>
+        <label for="Número da mesa"></label>
+        <input type="number" id="mesa" name="mesa" placeholder="Número da mesa" required>
+        <ul id="cart-items"></ul>
+        <div class="adicionar">
+          <p>Total: R$ <span id="cart-total">0.00</span></p>
+          <button class="send" onclick="enviar()">Enviar</button>
+        </div>
+    </div>
+
+    
+<div id="cart" class="cardapio">
+  <h1>Cardápio</h1>
+    <ul id="products"></ul>
+
+</div>
+
+
+<div id="orderConfirmationPopup" class="popup">
+  PRODUTO ACIONADO AO CARRINHO!
+</div>
+
+
+    <a href="#topo"><button class="tocart"><ion-icon name="cart"></ion-icon>
+    </button></a>
+
+  <script  src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+  <script src="script.js"></script>
+  <script src="produtos.js"></script>
+
+</body>
+</html>
